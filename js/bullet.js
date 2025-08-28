@@ -381,7 +381,7 @@ const b = {
         let dmg = radius * 0.019
         if (tech.isExplosionHarm) radius *= 1.7 //    1/sqrt(2) radius -> area
         if (tech.isSmallExplosion) {
-            // color = "rgba(255,0,30,0.7)"
+            // color = "rgba(255,30,30,0.7)"
             radius *= 0.7
             dmg *= 1.7
         }
@@ -423,7 +423,7 @@ const b = {
                         mobs.statusDoT(mob[i], dmg * damageScale * 0.25, 240) //apply radiation damage status effect on direct hits
                         if (tech.isStun) mobs.statusStun(mob[i], 30)
                         mob[i].locatePlayer();
-                        damageScale *= 0.87 //reduced damage for each additional explosion target
+                        damageScale *= 0.9 //reduced damage for each additional explosion target
                     }
                 }
             }
@@ -596,11 +596,11 @@ const b = {
         ctx.moveTo(path[0].x, path[0].y);
         ctx.lineTo(path[1].x, path[1].y);
         if (charge > 50) {
-            ctx.strokeStyle = "rgba(255,0,0,0.10)"
+            ctx.strokeStyle = "rgba(255,25.5,0,0.10)"
             ctx.lineWidth = 70
             ctx.stroke();
         }
-        ctx.strokeStyle = "rgba(255,0,0,0.25)"
+        ctx.strokeStyle = "rgba(255,25.5,0,0.25)"
         ctx.lineWidth = 20
         ctx.stroke();
         ctx.strokeStyle = "#f00";
@@ -616,7 +616,7 @@ const b = {
                 x: path[0].x + sub.x * dist + 10 * (Math.random() - 0.5),
                 y: path[0].y + sub.y * dist + 10 * (Math.random() - 0.5),
                 radius: 1.5 + 5 * Math.random(),
-                color: "rgba(255,0,0,0.5)",
+                color: "rgba(255,12.75,0,0.5)",
                 time: Math.floor(9 + 25 * Math.random() * Math.random())
             });
         }
@@ -8011,3 +8011,4 @@ const b = {
         },
     ],
 };
+
